@@ -1,8 +1,8 @@
 .card {
   display: flex;
   flex-direction: column;
-  min-width: 15vw;
-  max-width: 15vw;
+  min-width: calc(25% - 1.5rem);
+  max-width: calc(25% - 1.5rem);
 
   padding: 0.5rem 1rem;
   box-shadow: 5px 5px 21px 1px rgb(0 0 0 / 15%);

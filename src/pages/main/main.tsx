@@ -13,6 +13,7 @@ function Main(): ReactElement {
   return (
     <div className="container">
       <MainCard/>
+      <hr/>
       <MainGraphic/>
       <MainTable/>
     </div>
