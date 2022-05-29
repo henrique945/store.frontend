@@ -15,6 +15,7 @@ function Main(): ReactElement {
       <MainCard/>
       <hr className="mb-2"/>
       <MainGraphic/>
+      <div className="mb-2"/>
       <MainTable/>
     </div>
   );
