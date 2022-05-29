@@ -1,0 +1,19 @@
+table {
+  width: 100%;
+  text-transform: uppercase;
+  color: gray;
+}
+
+th, td {
+  padding: 0.5rem;
+  text-align: left;
+}
+
+table, th, td {
+  border-collapse: collapse;
+  border: 1px solid gray;
+}
+
+th {
+  background-color: rgba(211, 211, 211, 0.58);
+}

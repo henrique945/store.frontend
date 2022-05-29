@@ -30,12 +30,12 @@
 .graphic--data {
   display: flex;
   flex-direction: column;
-  width: 35vw;
+  width: 27vw;
 
-  padding: 1rem;
   box-shadow: 5px 5px 21px 1px rgb(0 0 0 / 15%);
   border: 1px solid #d3d3d3b0;
   border-radius: 5px;
+  padding: 1rem 1rem 0;
 }
 
 .graphic--data h6 {
