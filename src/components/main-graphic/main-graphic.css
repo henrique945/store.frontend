@@ -1,0 +1,59 @@
+.graphic {
+  display: flex;
+}
+
+.graphic--index {
+  display: flex;
+  flex-direction: column;
+  width: 15vw;
+
+  padding: 1rem;
+  box-shadow: 5px 5px 21px 1px rgb(0 0 0 / 15%);
+  border: 1px solid #d3d3d3b0;
+  border-radius: 5px;
+  margin-right: 2rem;
+}
+
+.graphic--index h6 {
+  margin: 0 0.5rem;
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.graphic--index--year {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 2rem;
+}
+
+.graphic--data {
+  display: flex;
+  flex-direction: column;
+  width: 35vw;
+
+  padding: 1rem;
+  box-shadow: 5px 5px 21px 1px rgb(0 0 0 / 15%);
+  border: 1px solid #d3d3d3b0;
+  border-radius: 5px;
+}
+
+.graphic--data h6 {
+  margin: 0 0.5rem;
+  font-size: 0.9rem;
+  color: gray;
+  text-transform: uppercase;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+
+  margin-right: 2.2rem;
+  border-radius: 50%;
+  background-color: blue;
+}
+
+.space {
+  margin-bottom: auto;
+}

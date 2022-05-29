@@ -13,7 +13,7 @@ function Main(): ReactElement {
   return (
     <div className="container">
       <MainCard/>
-      <hr/>
+      <hr className="mb-2"/>
       <MainGraphic/>
       <MainTable/>
     </div>
