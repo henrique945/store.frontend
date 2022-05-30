@@ -15,7 +15,6 @@ function MainTable(): ReactElement {
     const loadTableInfo = async () => {
       const info = await Report.getTableInfo();
 
-      console.log(info);
       setTableInfo(info);
     };
 

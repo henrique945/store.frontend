@@ -15,4 +15,9 @@ export interface MainGraphicProxy {
    */
   porcentagem: number;
 
+  /**
+   * Valor utilizado no grafico
+   */
+  value?: number;
+
 }

@@ -22,7 +22,8 @@ function MainGraphic(): ReactElement {
       for (let i = 0; i < info.length; i++) {
         const value = info[i].saldo.replaceAll('.', '');
         const valueFinal = value.replaceAll(',', '.');
-        chartData[i].value = +(valueFinal.split('R$')[1]);
+        info[i].value = +(valueFinal.split('R$')[1]);
+        chartData[i].value = info[i].value || 0;
       }
     };
 
@@ -44,10 +45,10 @@ function MainGraphic(): ReactElement {
         }
       </div>
 
-      {/* TODO: Adicionar informações no Tooltip */ }
       <div className="graphic--data">
         <h6>Faturamento por ano</h6>
         <hr className="space"/>
+
         <BarChart width={ 400 } height={ 150 } data={ chartData }>
           <Bar dataKey="value">
             {
@@ -56,8 +57,14 @@ function MainGraphic(): ReactElement {
               ))
             }
           </Bar>
-          <Tooltip wrapperStyle={ { width: 200, backgroundColor: '#ccc' } }
-                   formatter={ (value: any) => `${ value }` }/>
+          <Tooltip wrapperStyle={ { width: '100%' } }
+                   separator={ '' }
+                   label={ '' }
+                   labelFormatter={ () => '' }
+                   contentStyle={ { backgroundColor: '#3f3f3f', borderRadius: '5px' } }
+                   itemStyle={ { color: '#fff' } }
+                   cursor={ { fill: 'transparent' } }
+                   formatter={ (value: number) => [`${ convertChartValueOnInfo(graphicInfo, value) }`, ''] }/>
         </BarChart>
       </div>
     </div>
@@ -94,5 +101,15 @@ const chartData = [
     value: 0,
   },
 ];
+
+const convertChartValueOnInfo = (info: MainGraphicProxy[], value: number): string => {
+  const graphic = info.find(i => i.value === value);
+
+  if (!graphic)
+    return 'Informação não encontrada.';
+
+  const percentage = (graphic.porcentagem * 100).toFixed(2);
+  return `${ graphic.ano } | ${ percentage } % | ${ graphic.saldo }`;
+};
 
 export default MainGraphic;
