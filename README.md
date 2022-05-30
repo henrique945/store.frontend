@@ -10,10 +10,10 @@
 ## Reference
 
 Layout:
-![layout](/assets/imgs/layout.PNG)
+![layout](/assets/imgs/layout.png)
 
 Project:
-![layout](/assets/imgs/layoutFinal.PNG)
+![layout](/assets/imgs/layoutFinal.png)
 
 ## Author
 
